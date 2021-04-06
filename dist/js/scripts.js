@@ -69,6 +69,28 @@ $(document).ready(function () {
 	};
 	myMenu($('.js-menu'));
 
+	// Выпадайка при клике
+	function dropClick(btn) {
+		if (btn.length) {
+			btn.each(function () {
+				var $this = $(this),
+					id = $this.data('id'),
+					dropBlock = $(id);
+				$this.on('click', function () {
+					$this.toggleClass('active');
+					dropBlock.toggleClass('open');
+				});
+				$(document).mouseup(function (e) {
+					if (!dropBlock.is(e.target) && dropBlock.has(e.target).length === 0 && !$this.is(e.target) && $this.has(e.target).length === 0) {
+						$this.removeClass('active');
+						dropBlock.removeClass('open');
+					}
+				});
+			});
+		}
+	}
+	dropClick($('.js-drop-click'));
+
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {
 	// 	fullHeight.css({
@@ -535,6 +557,22 @@ $(document).ready(function () {
 			$img.replaceWith($svg);
 		}, 'xml');
 	});
+
+	// Загорание лампочки при включении переключателя
+	function switchLamp() {
+		$('.sort__switch').each(function () {
+			var checkbox = $(this).find('input'),
+					lamp = $(this).find('.sort__indicator');
+			checkbox.on('change', function () {
+				if ($(this).prop('checked')) {
+					lamp.addClass('active');
+				} else {
+					lamp.removeClass('active');
+				}
+			})
+		})
+	}
+	switchLamp();
 
 	// // Присваивание класса при клике
 	// function clickToggle(block) {

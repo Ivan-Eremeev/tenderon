@@ -77,10 +77,10 @@
 			<div class="content">
 				<div class="wrapper">
 					<!-- search-->
-					<div class="search">
-						<input id="search" type="text">
+					<form class="search" action="">
+						<input id="search" type="text" name="">
 						<label for="search"> </label>
-					</div>
+					</form>
 					<!--	/search-->
 					<!-- select-filters-->
 					<div class="select-filters">
@@ -115,6 +115,27 @@
 								<div class="title-head__text">более 999 записей</div>
 							</div>
 							<!-- /title-head-->
+							<!-- sort-->
+							<form class="sort" action="">
+								<div class="sort__switch">
+									<input id="switch" type="checkbox" name="">
+									<label class="sort__button" for="switch"><span></span></label>
+									<label class="sort__indicator" for="switch"></label>
+									<div class="subtitle">Включить скрытые</div>
+								</div>
+								<div class="sort__select"> 
+									<div class="subtitle">Сортировка по:</div>
+									<div class="sort__select-btn js-drop-click" data-id="#sortDrop">Сумме
+										<div class="sort__drop" id="sortDrop">
+											<ul>
+												<li><a href="#">Популярности</a></li>
+												<li><a href="#">Размеру</a></li>
+											</ul>
+										</div>
+									</div><a class="sort__file" href="#"> <img src="img/file.svg" alt=""></a>
+								</div>
+							</form>
+							<!--	/sort-->
 						</main>
 						<aside class="sidebar"></aside>
 					</div>

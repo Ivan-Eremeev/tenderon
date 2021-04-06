@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 a {
-  transition: .1s;
+  transition: .3s;
   text-decoration: none;
 }
 button,
@@ -71,7 +71,7 @@ body {
   flex-grow: 1;
 }
 .title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
 }
 .subtitle {
@@ -80,5 +80,12 @@ body {
 }
 .main-sidebar {
   display: flex;
+}
+.main {
+  flex-grow: 1;
+  padding-right: 50px;
+}
+.sidebar {
+  width: 244px;
 }
 /* /settings */

@@ -24,9 +24,9 @@ block content
 			.wrapper
 
 				// search
-				.search
+				form(action="").search
 					//- img(src="img/search.svg", alt="")
-					input#search(type="text")
+					input#search(type="text" name="")
 					label(for="search") 
 				//	/search
 
@@ -63,6 +63,31 @@ block content
 							.title Результаты поиска
 							.title-head__text более 999 записей
 						// /title-head
+
+						// sort
+						form(action="").sort
+
+							.sort__switch
+								input#switch(type="checkbox", name="")
+								label.sort__button(for="switch")
+									span
+								label(for="switch").sort__indicator
+								.subtitle Включить скрытые
+
+							.sort__select 
+								.subtitle Сортировка по:
+								.sort__select-btn.js-drop-click(data-id="#sortDrop") Сумме
+									.sort__drop#sortDrop
+										ul
+											li
+												a(href="#") Популярности
+											li
+												a(href="#") Размеру
+								a(href="#").sort__file 
+									img(src="img/file.svg", alt="")
+						//	/sort
+
+						
 
 					aside.sidebar
 			

@@ -1,7 +1,12 @@
 .title-head {
   display: flex;
   align-items: flex-end;
-  line-height: 1;
+  line-height: 0.8;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+  .title {
+    margin-right: 25px;
+  }
   &__text {
     font-size: 20px;
   }
