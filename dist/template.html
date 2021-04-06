@@ -7,13 +7,14 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/light-theme.css">
 	</head>
 	<body>
 		<div class="page">
 			<!-- header-->
 			<header class="header" id="header">
-				<div class="wrapper">
-					<div class="header_container">
+				<div class="header__top">
+					<div class="wrapper"><a class="header__logo" href="home.html"><img src="img/logo.png" alt=""></a>
 						<!-- menu-->
 						<div class="js-menu menu menu--right">
 							<div class="menu__btn hamburger hamburger--squeeze" id="menu-btn">
@@ -21,16 +22,48 @@
 									<div class="hamburger-inner"></div>
 								</div>
 							</div>
-							<nav class="menu__nav" id="mmenu">
+							<nav>
 								<ul class="menu__list">
-									<li><a href="#">Меню 1</a></li>
-									<li><a href="#">Меню 2</a></li>
-									<li><a href="#">Меню 3</a></li>
-									<li><a href="#">Меню 4</a></li>
-									<li><a href="#">Меню 5</a></li>
-									<li><a href="#">Меню 6</a></li>
-									<li><a href="#">Меню 7</a></li>
-									<li><a href="#">Меню 8</a></li>
+									<li><a class="active" href="#">Поиск</a></li>
+									<li><a href="#">Учавстчвую</a></li>
+									<li><a href="#">Аналитика</a></li>
+								</ul>
+								<div class="menu__close" id="menu-close"></div>
+							</nav>
+							<div class="menu__over" id="menu-over"></div>
+						</div>
+						<!-- /menu-->
+						<!-- user-->
+						<div class="user"><a class="user__notify" href="#"><img src="img/bell.svg" alt=""></a>
+							<div class="user__login"><img src="img/user.svg" alt=""><span>Никнейм</span>
+								<div class="user__arrow"> <img src="img/arrow.svg" alt=""></div>
+								<div class="user__drop">
+									<ul>
+										<li> <a href="#"> <img src="img/user.svg" alt=""><span>Профиль</span></a></li>
+										<li> <a href="#"> <img src="img/flag.svg" alt=""><span>Избранное</span></a></li>
+										<li> <a href="#"> <img src="img/out.svg" alt=""><span>Выход</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--	/user-->
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="wrapper">
+						<!-- menu-->
+						<div class="js-menu menu menu--right">
+							<div class="menu__btn hamburger hamburger--squeeze" id="menu-btn">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
+							<nav class="menu__nav">
+								<ul class="menu__list menu__list--b">
+									<li><a class="active" href="#">Текущие</a></li>
+									<li><a href="#">Контракт</a></li>
+									<li><a href="#">Архивные</a></li>
+									<li><a href="#">Журнал</a></li>
 								</ul>
 								<div class="menu__close" id="menu-close"></div>
 							</nav>

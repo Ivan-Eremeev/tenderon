@@ -1,0 +1,70 @@
+// Цвета
+$white: #fff;
+$black: #31456a;
+$mainColor: #46D0DB;
+$border: #D3E0ED;
+
+body {
+  background-color: #fff;
+  color: $black;
+}
+a {
+  color: $black;
+}
+*::placeholder {
+  color: #a9a9a9;
+  opacity: 1;
+}
+.header {
+  &__top {
+    background-color: $white;
+  }
+  &__bottom {
+    background-color: $mainColor;
+  }
+}
+
+.menu {
+  &__list {
+    a {
+      color: $black;
+      &:after {
+        background-color: $mainColor;
+      }
+    }
+    &--b {
+			a {
+        color: $white;
+				&:after {
+					background-color: $white;
+				}
+			}
+		}
+  }
+}
+
+.user {
+  &__drop {
+    ul {
+      background-color: $white;
+    }
+  }
+}
+
+.search {
+  input {
+    background: #F5F5FA;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+  }
+}
+
+.select-filters {
+  &__item {
+    border: 1px solid $border;
+  }
+  &__cross {
+    &:after,&:before {
+      background-color: #778DA4;
+    }
+  }
+}

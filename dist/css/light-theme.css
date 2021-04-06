@@ -1,0 +1,56 @@
+body {
+  background-color: #fff;
+  color: #31456a; }
+
+a {
+  color: #31456a; }
+
+*::-webkit-input-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+*::-moz-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+*:-ms-input-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+*::-ms-input-placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+*::placeholder {
+  color: #a9a9a9;
+  opacity: 1; }
+
+.header__top {
+  background-color: #fff; }
+
+.header__bottom {
+  background-color: #46D0DB; }
+
+.menu__list a {
+  color: #31456a; }
+  .menu__list a:after {
+    background-color: #46D0DB; }
+
+.menu__list--b a {
+  color: #fff; }
+  .menu__list--b a:after {
+    background-color: #fff; }
+
+.user__drop ul {
+  background-color: #fff; }
+
+.search input {
+  background: #F5F5FA;
+  -webkit-box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF; }
+
+.select-filters__item {
+  border: 1px solid #D3E0ED; }
+
+.select-filters__cross:after, .select-filters__cross:before {
+  background-color: #778DA4; }

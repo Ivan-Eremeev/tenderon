@@ -23,7 +23,36 @@ block content
 		.content
 			.wrapper
 
-				
+				// search
+				.search
+					//- img(src="img/search.svg", alt="")
+					input#search(type="text")
+					label(for="search") 
+				//	/search
+
+				// select-filters
+				.select-filters
+					.subtitle Выбранные фильтры
+					.select-filters__row
+						.select-filters__item 
+							span 44-ФЗ
+							.select-filters__cross
+						.select-filters__item 
+							span С авансом
+							.select-filters__cross
+						.select-filters__item 
+							span Конкурс
+							.select-filters__cross
+						.select-filters__item 
+							span Аукнион
+							.select-filters__cross
+						.select-filters__item 
+							span Запрос котировок
+							.select-filters__cross
+						.select-filters__item 
+							span Запрос предложений
+							.select-filters__cross
+				//	/select-filters
 			
 		include blocks/footer.jade
 

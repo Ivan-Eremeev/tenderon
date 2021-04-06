@@ -6,8 +6,8 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1200px; // Максимальная ширина контейнера
-$gutter: 15px; // Расстояние между колонками
+$max-width: 1036px; // Максимальная ширина контейнера
+$gutter: 20px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
 // Брэйкпоинты
@@ -32,13 +32,22 @@ $break_xs: 500px;
 @include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Black", 900, normal);
 
 // Цвета
-// $black: #000;
+$white: #fff;
+$black: #31456a;
+$mainColor: #46D0DB;
+$border: #D3E0ED;
+
+// Переменные
+$shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
 
 // Подключение файлов
 @import 'blocks/settings';
 @import 'hamburgers/hamburgers';
 @import 'blocks/menu';
-// @import 'blocks/mmenu';
+@import 'blocks/header';
+@import 'blocks/user';
+@import 'blocks/search';
+@import 'blocks/select-filters';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';
 // @import 'blocks/tabs';
