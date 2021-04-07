@@ -4,6 +4,7 @@ block title
 	title Главная
 
 block style-libs
+	link(rel="stylesheet", href="css/libs/jquery-ui.min.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
 	//- link(rel="stylesheet", href="css/libs/fullpage.css")
 	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
@@ -126,11 +127,45 @@ block content
 							//	/pagination
 
 					aside.sidebar
+
+						.input
+							input(type="text" placeholder="Исключить слова +")
+
+						// filters
+						.filters
+
+							.filters__row 
+								.subtitle Закон
+								.filters__flex 
+									.filters__radio
+										input#law_1(type="radio" name="law" checked)
+										label.filters__radio-circle(for="law_1")
+										label.filters__radio-text(for="law_1") 44-ФЗ
+									.filters__radio
+										input#law_2(type="radio" name="law")
+										label.filters__radio-circle(for="law_2")
+										label.filters__radio-text(for="law_2") 44-ФЗ
+
+							.filters__row 
+								.subtitle Период публикации
+								.filters__flex 
+									.filters__date 
+										input#date_1.js-datepicker(type="text")
+										label(for="date_1")
+									span &mdash;
+									.filters__date 
+										input#date_2.js-datepicker(type="text")
+										label(for="date_2") 
+						//	/filters
+
+
 			
 		include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/jquery-ui.min.js") 
+	script(src="js/libs/datepicker-ru.js") 
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")

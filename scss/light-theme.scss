@@ -256,3 +256,51 @@ a {
     }
   }
 }
+
+.input {
+  input {
+    background: #F5F5FA;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+  }
+}
+
+.filters {
+  &__row {
+    &:not(:last-child) {
+      border-bottom: 1px solid $border;
+    }
+  }
+  &__radio-circle {
+    border: 1px solid $black;
+    &:after {
+      background-color: $mainColor;
+    }
+  }
+  &__radio-text {
+    border-bottom: 1px solid #AFD5EB;
+  }
+  &__date {
+    border-bottom: 1px solid $border;
+  }
+}
+
+.ui-widget-content .ui-state-default {
+  background: $white;
+  border-color: $border;
+}
+.ui-widget-content .ui-state-highlight {
+  background: $border;
+}
+.ui-widget-content .ui-state-active {
+  background: $mainColor;
+  border-color: $mainColor;
+}
+.ui-widget.ui-widget-content {
+  box-shadow: $shadow;
+  border-radius: 10px;
+}
+.ui-widget-header {
+  background: $white;
+  border-color: $border;
+  border-radius: 10px;
+}

@@ -590,6 +590,10 @@ $(document).ready(function () {
 	}
 	switchLamp();
 
+	// Datepicker | Выбор даты
+	$.datepicker.setDefaults($.datepicker.regional["ru"]);
+	$(".js-datepicker").datepicker();
+
 	// // Присваивание класса при клике
 	// function clickToggle(block) {
 	// 	if (block.length) {

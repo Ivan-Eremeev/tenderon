@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
+		<link rel="stylesheet" href="css/libs/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/light-theme.css">
 	</head>
@@ -338,7 +339,43 @@
 								<!--	/pagination-->
 							</div>
 						</main>
-						<aside class="sidebar"></aside>
+						<aside class="sidebar">
+							<div class="input">
+								<input type="text" placeholder="Исключить слова +">
+							</div>
+							<!-- filters-->
+							<div class="filters">
+								<div class="filters__row"> 
+									<div class="subtitle">Закон</div>
+									<div class="filters__flex"> 
+										<div class="filters__radio">
+											<input id="law_1" type="radio" name="law" checked>
+											<label class="filters__radio-circle" for="law_1"></label>
+											<label class="filters__radio-text" for="law_1">44-ФЗ</label>
+										</div>
+										<div class="filters__radio">
+											<input id="law_2" type="radio" name="law">
+											<label class="filters__radio-circle" for="law_2"></label>
+											<label class="filters__radio-text" for="law_2">44-ФЗ</label>
+										</div>
+									</div>
+								</div>
+								<div class="filters__row"> 
+									<div class="subtitle">Период публикации</div>
+									<div class="filters__flex"> 
+										<div class="filters__date"> 
+											<input class="js-datepicker" id="date_1" type="text">
+											<label for="date_1"></label>
+										</div><span>&mdash;</span>
+										<div class="filters__date"> 
+											<input class="js-datepicker" id="date_2" type="text">
+											<label for="date_2"> </label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--	/filters-->
+						</aside>
 					</div>
 				</div>
 			</div>
@@ -384,6 +421,8 @@
 			<!-- /footer-->
 		</div>
 		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/jquery-ui.min.js"> </script>
+		<script src="js/libs/datepicker-ru.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
