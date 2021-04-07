@@ -205,3 +205,17 @@ a {
     }
   }
 }
+
+.btn {
+  background-color: $mainColor;
+  box-shadow: $shadow;
+  color: $white;
+}
+
+.pagination {
+  &__numbers {
+    a {
+      color: $mainColor;
+    }
+  }
+}

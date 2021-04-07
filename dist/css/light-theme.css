@@ -147,3 +147,12 @@ a {
 
 .card__drop-row:not(:last-child) {
   border-bottom: 1px solid #D3E0ED; }
+
+.btn {
+  background-color: #46D0DB;
+  -webkit-box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
+  box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
+  color: #fff; }
+
+.pagination__numbers a {
+  color: #46D0DB; }

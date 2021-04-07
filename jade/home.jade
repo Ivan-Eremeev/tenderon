@@ -58,43 +58,72 @@ block content
 
 				.main-sidebar 
 
-					main.main 
+					main.main
 
-						// title-head
-						.title-head
-							.title Результаты поиска
-							.title-head__text более 999 записей
-						// /title-head
+						.main__body
 
-						// sort
-						form(action="").sort
+							// title-head
+							.title-head
+								.title Результаты поиска
+								.title-head__text более 999 записей
+							// /title-head
 
-							.sort__switch
-								input#switch(type="checkbox", name="")
-								label.sort__button(for="switch")
-									span
-								label(for="switch").sort__indicator
-								.subtitle Включить скрытые
+							// sort
+							form(action="").sort
 
-							.sort__select 
-								.subtitle Сортировка по:
-								.sort__select-btn.js-drop-click(data-id="#sortDrop") Сумме
-									.sort__drop#sortDrop
-										ul
-											li
-												a(href="#") Популярности
-											li
-												a(href="#") Размеру
-								a(href="#").sort__file 
-									img(src="img/file.svg", alt="")
-						//	/sort
+								.sort__switch
+									input#switch(type="checkbox", name="")
+									label.sort__button(for="switch")
+										span
+									label(for="switch").sort__indicator
+									.subtitle Включить скрытые
 
-						.cards
+								.sort__select 
+									.subtitle Сортировка по:
+									.sort__select-btn.js-drop-click(data-id="#sortDrop") Сумме
+										.sort__drop#sortDrop
+											ul
+												li
+													a(href="#") Популярности
+												li
+													a(href="#") Размеру
+									a(href="#").sort__file 
+										img(src="img/file.svg", alt="")
+							//	/sort
 
-							+card(false,true)
-							+card(true)
-							+card(true)
-							+card
+							.cards
+
+								+card(false,true)
+								+card(true)
+								+card(true)
+								+card
+
+						.main__footer
+							a(href="#").btn.btn--full Показать ещё
+
+							// pagination
+							.pagination
+								.pagination__arrows
+									a(href="#")
+										img(src="img/arrows-green.svg", alt="")
+									a(href="#")
+										img(src="img/arrow-green.svg", alt="")
+								.pagination__numbers 
+									a(href="#") 1
+									a(href="#") 2
+									a(href="#") 3
+									a(href="#") 4
+									a(href="#") 5
+									a(href="#") 6
+									a(href="#") 7
+									a(href="#") 8
+									a(href="#") 9
+								.pagination__arrows.pagination__arrows--next
+									a(href="#")
+										img(src="img/arrow-green.svg", alt="")
+									a(href="#")
+										img(src="img/arrows-green.svg", alt="")
+							//	/pagination
 
 					aside.sidebar
 			
