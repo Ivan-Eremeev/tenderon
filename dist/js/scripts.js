@@ -590,9 +590,23 @@ $(document).ready(function () {
 	}
 	switchLamp();
 
-	// Datepicker | Выбор даты
+	// JQueryUI Datepicker | Выбор даты
 	$.datepicker.setDefaults($.datepicker.regional["ru"]);
 	$(".js-datepicker").datepicker();
+
+	// JQueryUI Slider | Ползунок
+	$("#slider").slider({
+		range: true,
+		min: 0,
+		max: 5000000,
+		values: [0, 1999999],
+		slide: function (event, ui) {
+			$("#amount1").val(ui.values[0] + ' ₽');
+			$("#amount2").val(ui.values[1] + ' ₽');
+		}
+	});
+	$("#amount1").val($("#slider").slider("values", 0) + ' ₽');
+	$("#amount2").val($("#slider").slider("values", 1) + ' ₽');
 
 	// // Присваивание класса при клике
 	// function clickToggle(block) {

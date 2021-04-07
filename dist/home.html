@@ -344,7 +344,7 @@
 								<input type="text" placeholder="Исключить слова +">
 							</div>
 							<!-- filters-->
-							<div class="filters">
+							<form class="filters" action="">
 								<div class="filters__row"> 
 									<div class="subtitle">Закон</div>
 									<div class="filters__flex"> 
@@ -364,16 +364,28 @@
 									<div class="subtitle">Период публикации</div>
 									<div class="filters__flex"> 
 										<div class="filters__date"> 
-											<input class="js-datepicker" id="date_1" type="text">
+											<input class="js-datepicker" id="date_1" type="text" autocomplete="off">
 											<label for="date_1"></label>
-										</div><span>&mdash;</span>
+										</div><span class="filters__dash">&mdash;</span>
 										<div class="filters__date"> 
-											<input class="js-datepicker" id="date_2" type="text">
+											<input class="js-datepicker" id="date_2" type="text" autocomplete="off">
 											<label for="date_2"> </label>
 										</div>
 									</div>
 								</div>
-							</div>
+								<div class="filters__row"> 
+									<div class="subtitle">Начальная цена</div>
+									<div class="filters__slider" id="slider"></div>
+									<div class="filters__flex"> 
+										<div class="filters__amount">
+											<input type="text" readonly id="amount1">
+										</div><span class="filters__dash">&mdash;</span>
+										<div class="filters__amount">
+											<input type="text" readonly id="amount2">
+										</div>
+									</div>
+								</div>
+							</form>
 							<!--	/filters-->
 						</aside>
 					</div>
