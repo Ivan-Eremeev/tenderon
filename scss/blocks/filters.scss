@@ -1,10 +1,16 @@
 .filters {
+  &__block {
+    padding-right: 35px;
+  }
   .subtitle {
     margin-bottom: 13px;
   }
   &__row {
     padding-bottom: 20px;
     margin-bottom: 15px;
+    &--pb15 {
+      padding-bottom: 15px;
+    }
   }
   &__flex {
     display: flex;
@@ -85,7 +91,7 @@
   &__radio2 {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin-top: 20px;
     input {
       display: none;
     }
@@ -116,14 +122,59 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     .subtitle {
       margin-bottom: 0;
     }
+  }
+  &__options {
+    margin-bottom: 30px;
   }
   &__plus {
     width: 20px;
     height: 20px;
     border-radius: 100%;
     margin-left: 10px;
+  }
+  &__drop {
+    padding-top: 10px;
+    position: absolute;
+    top: 100%;
+    transform: translate(0,50px);
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: 0.5s;
+    .filters__radio2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    &.open {
+      opacity: 1;
+      transform: translate(0,0);
+      visibility: visible;
+    }
+  }
+  &__drop-container {
+    padding: 20px 0 20px 20px;
+    border-radius: 20px;
+  }
+  &__drop-scrollbar {
+    max-height: 110px;
+    padding-right: 30px !important;
+  }
+  &__location {
+    .filters__radio2 {
+      margin-top: 0;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
   }
 }

@@ -10,7 +10,7 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
-	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
 	//- link(rel="stylesheet", href="css/libs/slick.css")
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
@@ -134,52 +134,168 @@ block content
 						// filters
 						form(action="").filters
 
-							.filters__row 
-								.subtitle Закон
-								.filters__flex 
-									.filters__radio
-										input#law_1(type="radio" name="law" checked)
-										label.filters__radio-circle(for="law_1")
-										label.filters__radio-text(for="law_1") 44-ФЗ
-									.filters__radio
-										input#law_2(type="radio" name="law")
-										label.filters__radio-circle(for="law_2")
-										label.filters__radio-text(for="law_2") 44-ФЗ
+							.filters__block
+								.filters__row 
+									.subtitle Закон
+									.filters__flex 
+										.filters__radio
+											input#law_1(type="radio" name="law" checked)
+											label.filters__radio-circle(for="law_1")
+											label.filters__radio-text(for="law_1") 44-ФЗ
+										.filters__radio
+											input#law_2(type="radio" name="law")
+											label.filters__radio-circle(for="law_2")
+											label.filters__radio-text(for="law_2") 44-ФЗ
 
-							.filters__row 
-								.subtitle Период публикации
-								.filters__flex 
-									.filters__date 
-										input#date_1.js-datepicker(type="text" autocomplete="off")
-										label(for="date_1")
-									span.filters__dash &mdash;
-									.filters__date 
-										input#date_2.js-datepicker(type="text" autocomplete="off")
-										label(for="date_2") 
+								.filters__row 
+									.subtitle Период публикации
+									.filters__flex 
+										.filters__date 
+											input#date_1.js-datepicker(type="text" autocomplete="off")
+											label(for="date_1")
+										span.filters__dash &mdash;
+										.filters__date 
+											input#date_2.js-datepicker(type="text" autocomplete="off")
+											label(for="date_2") 
 
-							.filters__row 
-								.subtitle Начальная цена
-								#slider.filters__slider
-								.filters__flex
-									.filters__amount
-										input(type="text" readonly)#amount1
-									span.filters__dash &mdash;
-									.filters__amount
-										input(type="text" readonly)#amount2 
-								.filters__radio2
-									input#price_1(type="radio" name="price")
-									label.filters__radio2-circle(for="price_1") 
-									label.filters__radio2-text(for="price_1") С авансом
-								.filters__radio2
-									input#price_2(type="radio" name="price")
-									label.filters__radio2-circle(for="price_2") 
-									label.filters__radio2-text(for="price_2") Бесплатное участие
+								.filters__row 
+									.subtitle Начальная цена
+									#slider.filters__slider
+									.filters__flex
+										.filters__amount
+											input(type="text" readonly)#amount1
+										span.filters__dash &mdash;
+										.filters__amount
+											input(type="text" readonly)#amount2 
+									.filters__radio2
+										input#price_1(type="radio" name="price" checked)
+										label.filters__radio2-circle(for="price_1") 
+										label.filters__radio2-text(for="price_1") С авансом
+									.filters__radio2
+										input#price_2(type="radio" name="price")
+										label.filters__radio2-circle(for="price_2") 
+										label.filters__radio2-text(for="price_2") Бесплатное участие
 
-							.filters__row
-								.filters__dropbtn
-									.subtitle Заказчики
-									.filters__plus
-								.filters__drop
+								.filters__options 
+
+									.filters__row.filters__row--pb15
+										.filters__dropbtn
+											.subtitle Заказчики
+											.filters__plus.js-drop-click(data-id="#filter_1")
+											.filters__drop#filter_1
+												.filters__drop-container 
+													.filters__drop-scrollbar.scrollbar-inner
+														.filters__radio2
+															input#variant_1(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_1") 
+															label.filters__radio2-text(for="variant_1") Вариант 1
+														.filters__radio2
+															input#variant_2(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_2") 
+															label.filters__radio2-text(for="variant_2") Вариант 2
+														.filters__radio2
+															input#variant_3(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_3") 
+															label.filters__radio2-text(for="variant_3") Вариант 3
+														.filters__radio2
+															input#variant_4(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_4") 
+															label.filters__radio2-text(for="variant_4") Вариант 4
+
+									.filters__row.filters__row--pb15
+										.filters__dropbtn
+											.subtitle Поставщики
+											.filters__plus.js-drop-click(data-id="#filter_2")
+											.filters__drop#filter_2
+												.filters__drop-container 
+													.filters__drop-scrollbar.scrollbar-inner
+														.filters__radio2
+															input#variant_5(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_5") 
+															label.filters__radio2-text(for="variant_5") Вариант 1
+														.filters__radio2
+															input#variant_6(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_6") 
+															label.filters__radio2-text(for="variant_6") Вариант 2
+														.filters__radio2
+															input#variant_7(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_7") 
+															label.filters__radio2-text(for="variant_7") Вариант 3
+														.filters__radio2
+															input#variant_8(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_8") 
+															label.filters__radio2-text(for="variant_8") Вариант 4
+
+
+									.filters__row.filters__row--pb15
+										.filters__dropbtn
+											.subtitle Место поставки
+											.filters__plus.js-drop-click(data-id="#filter_3")
+											.filters__drop#filter_3
+												.filters__drop-container 
+													.filters__drop-scrollbar.scrollbar-inner
+														.filters__radio2
+															input#variant_9(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_9") 
+															label.filters__radio2-text(for="variant_9") Вариант 1
+														.filters__radio2
+															input#variant_10(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_10") 
+															label.filters__radio2-text(for="variant_10") Вариант 2
+														.filters__radio2
+															input#variant_11(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_11") 
+															label.filters__radio2-text(for="variant_11") Вариант 3
+														.filters__radio2
+															input#variant_12(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_12") 
+															label.filters__radio2-text(for="variant_12") Вариант 4
+
+									.filters__row.filters__row--pb15
+										.filters__dropbtn
+											.subtitle Классификатор продукции
+											.filters__plus.js-drop-click(data-id="#filter_4")
+											.filters__drop#filter_4
+												.filters__drop-container 
+													.filters__drop-scrollbar.scrollbar-inner
+														.filters__radio2
+															input#variant_13(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_13") 
+															label.filters__radio2-text(for="variant_13") Вариант 1
+														.filters__radio2
+															input#variant_14(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_14") 
+															label.filters__radio2-text(for="variant_14") Вариант 2
+														.filters__radio2
+															input#variant_15(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_15") 
+															label.filters__radio2-text(for="variant_15") Вариант 3
+														.filters__radio2
+															input#variant_16(type="radio" name="variant")
+															label.filters__radio2-circle(for="variant_16") 
+															label.filters__radio2-text(for="variant_16") Вариант 4
+
+								.filters__row
+									.subtitle Способы размещения
+									.filters__location
+										.filters__radio2
+											input#location_1(type="checkbox")
+											label.filters__radio2-circle(for="location_1") 
+											label.filters__radio2-text(for="location_1") Аукцион
+										.filters__radio2
+											input#location_2(type="checkbox")
+											label.filters__radio2-circle(for="location_2") 
+											label.filters__radio2-text(for="location_2") Конкурс
+										.filters__radio2
+											input#location_3(type="checkbox")
+											label.filters__radio2-circle(for="location_3") 
+											label.filters__radio2-text(for="location_3") Запрос котировок
+										.filters__radio2
+											input#location_4(type="checkbox")
+											label.filters__radio2-circle(for="location_4") 
+											label.filters__radio2-text(for="location_4") Запрос предложений
+							button(type="submit").btn Применить фильтры
+							.btn.btn--2 Сбросить фильтры
 						//	/filters
 
 
@@ -199,7 +315,7 @@ block js-libs
 	//- script(src="js/libs/jquery.mmenu.min.all.js")
 	//- script(src="js/libs/fullpage.min.js")
 	//- script(src="js/libs/jquery.vide.min.js")
-	//- script(src="js/libs/jquery.scrollbar.min.js")
+	script(src="js/libs/jquery.scrollbar.min.js")
 	//- script(src="js/libs/aos.js")
 	//- script(src="js/libs/circle-progress.min.js")
 	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")

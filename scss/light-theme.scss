@@ -115,6 +115,7 @@ a {
   &__drop {
     ul {
       background-color: $white;
+      box-shadow: $shadow;
       li {
 
       }
@@ -218,6 +219,10 @@ a {
   background-color: $mainColor;
   box-shadow: $shadow;
   color: $white;
+  &--2 {
+    background-color: $white;
+    color: #6A7A92;
+  }
 }
 
 .pagination {
@@ -302,7 +307,7 @@ a {
   }
   &__radio2-circle {
     background-color: $white;
-    box-shadow: $shadow;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
     &:after {
       background: #31456A;
       box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
@@ -314,6 +319,13 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+  }
+  &__drop {
+    
+  }
+  &__drop-container {
+    background-color: $white;
+    box-shadow: $shadow;
   }
 }
 
@@ -358,4 +370,33 @@ a {
   border: none;
   box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
   outline: none;
+  cursor: pointer;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+  width: 6px;
+  right: 15px;
+}
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+  overflow: visible;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track {
+  opacity: 1;
+}
+.scrollbar-inner > .scroll-element .scroll-bar {
+  max-width: 18px;
+  min-width: 18px;
+  max-height: 18px;
+  min-height: 18px;
+  background: $white;
+  box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
+  opacity: 1;
+  left: -6px;
+  cursor: pointer;
+}
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+  background: $white;
+}
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+  background: $mainColor;
 }

@@ -107,6 +107,9 @@ $(document).ready(function () {
 	}
 	dropDown();
 
+	// JQueryScrollbar
+	$('.scrollbar-inner').scrollbar();
+
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {
 	// 	fullHeight.css({

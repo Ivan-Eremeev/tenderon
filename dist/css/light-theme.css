@@ -85,7 +85,9 @@ a {
   color: #46D0DB; }
 
 .sort__drop ul {
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
+  box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5); }
   .sort__drop ul a:hover {
     color: #46D0DB; }
 
@@ -159,6 +161,9 @@ a {
   -webkit-box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
   box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
   color: #fff; }
+  .btn--2 {
+    background-color: #fff;
+    color: #6A7A92; }
 
 .pagination__arrows a svg {
   stroke: #46D0DB; }
@@ -212,8 +217,8 @@ a {
 
 .filters__radio2-circle {
   background-color: #fff;
-  -webkit-box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
-  box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5); }
+  -webkit-box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35); }
   .filters__radio2-circle:after {
     background: #31456A;
     -webkit-box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
@@ -226,6 +231,11 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer; }
+
+.filters__drop-container {
+  background-color: #fff;
+  -webkit-box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
+  box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5); }
 
 .ui-datepicker {
   z-index: 2 !important; }
@@ -270,4 +280,33 @@ a {
   border: none;
   -webkit-box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
   box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
+
+.scrollbar-inner > .scroll-element.scroll-y {
+  width: 6px;
+  right: 15px; }
+
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+  overflow: visible; }
+
+.scrollbar-inner > .scroll-element .scroll-element_track {
+  opacity: 1; }
+
+.scrollbar-inner > .scroll-element .scroll-bar {
+  max-width: 18px;
+  min-width: 18px;
+  max-height: 18px;
+  min-height: 18px;
+  background: #fff;
+  -webkit-box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
+  box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
+  opacity: 1;
+  left: -6px;
+  cursor: pointer; }
+
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+  background: #fff; }
+
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+  background: #46D0DB; }

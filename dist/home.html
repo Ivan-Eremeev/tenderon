@@ -7,6 +7,7 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="stylesheet" href="css/libs/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/libs/jquery.scrollbar.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/light-theme.css">
 	</head>
@@ -345,63 +346,215 @@
 							</div>
 							<!-- filters-->
 							<form class="filters" action="">
-								<div class="filters__row"> 
-									<div class="subtitle">Закон</div>
-									<div class="filters__flex"> 
-										<div class="filters__radio">
-											<input id="law_1" type="radio" name="law" checked>
-											<label class="filters__radio-circle" for="law_1"></label>
-											<label class="filters__radio-text" for="law_1">44-ФЗ</label>
+								<div class="filters__block">
+									<div class="filters__row"> 
+										<div class="subtitle">Закон</div>
+										<div class="filters__flex"> 
+											<div class="filters__radio">
+												<input id="law_1" type="radio" name="law" checked>
+												<label class="filters__radio-circle" for="law_1"></label>
+												<label class="filters__radio-text" for="law_1">44-ФЗ</label>
+											</div>
+											<div class="filters__radio">
+												<input id="law_2" type="radio" name="law">
+												<label class="filters__radio-circle" for="law_2"></label>
+												<label class="filters__radio-text" for="law_2">44-ФЗ</label>
+											</div>
 										</div>
-										<div class="filters__radio">
-											<input id="law_2" type="radio" name="law">
-											<label class="filters__radio-circle" for="law_2"></label>
-											<label class="filters__radio-text" for="law_2">44-ФЗ</label>
+									</div>
+									<div class="filters__row"> 
+										<div class="subtitle">Период публикации</div>
+										<div class="filters__flex"> 
+											<div class="filters__date"> 
+												<input class="js-datepicker" id="date_1" type="text" autocomplete="off">
+												<label for="date_1"></label>
+											</div><span class="filters__dash">&mdash;</span>
+											<div class="filters__date"> 
+												<input class="js-datepicker" id="date_2" type="text" autocomplete="off">
+												<label for="date_2"> </label>
+											</div>
+										</div>
+									</div>
+									<div class="filters__row"> 
+										<div class="subtitle">Начальная цена</div>
+										<div class="filters__slider" id="slider"></div>
+										<div class="filters__flex">
+											<div class="filters__amount">
+												<input type="text" readonly id="amount1">
+											</div><span class="filters__dash">&mdash;</span>
+											<div class="filters__amount">
+												<input type="text" readonly id="amount2">
+											</div>
+										</div>
+										<div class="filters__radio2">
+											<input id="price_1" type="radio" name="price" checked>
+											<label class="filters__radio2-circle" for="price_1"> </label>
+											<label class="filters__radio2-text" for="price_1">С авансом</label>
+										</div>
+										<div class="filters__radio2">
+											<input id="price_2" type="radio" name="price">
+											<label class="filters__radio2-circle" for="price_2"> </label>
+											<label class="filters__radio2-text" for="price_2">Бесплатное участие</label>
+										</div>
+									</div>
+									<div class="filters__options"> 
+										<div class="filters__row filters__row--pb15">
+											<div class="filters__dropbtn">
+												<div class="subtitle">Заказчики</div>
+												<div class="filters__plus js-drop-click" data-id="#filter_1"></div>
+												<div class="filters__drop" id="filter_1">
+													<div class="filters__drop-container"> 
+														<div class="filters__drop-scrollbar scrollbar-inner">
+															<div class="filters__radio2">
+																<input id="variant_1" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_1"> </label>
+																<label class="filters__radio2-text" for="variant_1">Вариант 1</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_2" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_2"> </label>
+																<label class="filters__radio2-text" for="variant_2">Вариант 2</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_3" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_3"> </label>
+																<label class="filters__radio2-text" for="variant_3">Вариант 3</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_4" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_4"> </label>
+																<label class="filters__radio2-text" for="variant_4">Вариант 4</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="filters__row filters__row--pb15">
+											<div class="filters__dropbtn">
+												<div class="subtitle">Поставщики</div>
+												<div class="filters__plus js-drop-click" data-id="#filter_2"></div>
+												<div class="filters__drop" id="filter_2">
+													<div class="filters__drop-container"> 
+														<div class="filters__drop-scrollbar scrollbar-inner">
+															<div class="filters__radio2">
+																<input id="variant_5" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_5"> </label>
+																<label class="filters__radio2-text" for="variant_5">Вариант 1</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_6" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_6"> </label>
+																<label class="filters__radio2-text" for="variant_6">Вариант 2</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_7" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_7"> </label>
+																<label class="filters__radio2-text" for="variant_7">Вариант 3</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_8" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_8"> </label>
+																<label class="filters__radio2-text" for="variant_8">Вариант 4</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="filters__row filters__row--pb15">
+											<div class="filters__dropbtn">
+												<div class="subtitle">Место поставки</div>
+												<div class="filters__plus js-drop-click" data-id="#filter_3"></div>
+												<div class="filters__drop" id="filter_3">
+													<div class="filters__drop-container"> 
+														<div class="filters__drop-scrollbar scrollbar-inner">
+															<div class="filters__radio2">
+																<input id="variant_9" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_9"> </label>
+																<label class="filters__radio2-text" for="variant_9">Вариант 1</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_10" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_10"> </label>
+																<label class="filters__radio2-text" for="variant_10">Вариант 2</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_11" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_11"> </label>
+																<label class="filters__radio2-text" for="variant_11">Вариант 3</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_12" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_12"> </label>
+																<label class="filters__radio2-text" for="variant_12">Вариант 4</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="filters__row filters__row--pb15">
+											<div class="filters__dropbtn">
+												<div class="subtitle">Классификатор продукции</div>
+												<div class="filters__plus js-drop-click" data-id="#filter_4"></div>
+												<div class="filters__drop" id="filter_4">
+													<div class="filters__drop-container"> 
+														<div class="filters__drop-scrollbar scrollbar-inner">
+															<div class="filters__radio2">
+																<input id="variant_13" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_13"> </label>
+																<label class="filters__radio2-text" for="variant_13">Вариант 1</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_14" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_14"> </label>
+																<label class="filters__radio2-text" for="variant_14">Вариант 2</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_15" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_15"> </label>
+																<label class="filters__radio2-text" for="variant_15">Вариант 3</label>
+															</div>
+															<div class="filters__radio2">
+																<input id="variant_16" type="radio" name="variant">
+																<label class="filters__radio2-circle" for="variant_16"> </label>
+																<label class="filters__radio2-text" for="variant_16">Вариант 4</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="filters__row">
+										<div class="subtitle">Способы размещения</div>
+										<div class="filters__location">
+											<div class="filters__radio2">
+												<input id="location_1" type="checkbox">
+												<label class="filters__radio2-circle" for="location_1"> </label>
+												<label class="filters__radio2-text" for="location_1">Аукцион</label>
+											</div>
+											<div class="filters__radio2">
+												<input id="location_2" type="checkbox">
+												<label class="filters__radio2-circle" for="location_2"> </label>
+												<label class="filters__radio2-text" for="location_2">Конкурс</label>
+											</div>
+											<div class="filters__radio2">
+												<input id="location_3" type="checkbox">
+												<label class="filters__radio2-circle" for="location_3"> </label>
+												<label class="filters__radio2-text" for="location_3">Запрос котировок</label>
+											</div>
+											<div class="filters__radio2">
+												<input id="location_4" type="checkbox">
+												<label class="filters__radio2-circle" for="location_4"> </label>
+												<label class="filters__radio2-text" for="location_4">Запрос предложений</label>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="filters__row"> 
-									<div class="subtitle">Период публикации</div>
-									<div class="filters__flex"> 
-										<div class="filters__date"> 
-											<input class="js-datepicker" id="date_1" type="text" autocomplete="off">
-											<label for="date_1"></label>
-										</div><span class="filters__dash">&mdash;</span>
-										<div class="filters__date"> 
-											<input class="js-datepicker" id="date_2" type="text" autocomplete="off">
-											<label for="date_2"> </label>
-										</div>
-									</div>
-								</div>
-								<div class="filters__row"> 
-									<div class="subtitle">Начальная цена</div>
-									<div class="filters__slider" id="slider"></div>
-									<div class="filters__flex">
-										<div class="filters__amount">
-											<input type="text" readonly id="amount1">
-										</div><span class="filters__dash">&mdash;</span>
-										<div class="filters__amount">
-											<input type="text" readonly id="amount2">
-										</div>
-									</div>
-									<div class="filters__radio2">
-										<input id="price_1" type="radio" name="price">
-										<label class="filters__radio2-circle" for="price_1"> </label>
-										<label class="filters__radio2-text" for="price_1">С авансом</label>
-									</div>
-									<div class="filters__radio2">
-										<input id="price_2" type="radio" name="price">
-										<label class="filters__radio2-circle" for="price_2"> </label>
-										<label class="filters__radio2-text" for="price_2">Бесплатное участие</label>
-									</div>
-								</div>
-								<div class="filters__row">
-									<div class="filters__dropbtn">
-										<div class="subtitle">Заказчики</div>
-										<div class="filters__plus"></div>
-									</div>
-									<div class="filters__drop"></div>
-								</div>
+								<button class="btn" type="submit">Применить фильтры</button>
+								<div class="btn btn--2">Сбросить фильтры</div>
 							</form>
 							<!--	/filters-->
 						</aside>
@@ -452,6 +605,7 @@
 		<script src="js/libs/jquery.min.js"></script>
 		<script src="js/libs/jquery-ui.min.js"> </script>
 		<script src="js/libs/datepicker-ru.js"> </script>
+		<script src="js/libs/jquery.scrollbar.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
