@@ -943,7 +943,10 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; }
+    user-select: none;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
     .card__journal:after {
       content: '';
       display: block;
@@ -964,7 +967,10 @@ body {
   .card__favorites {
     position: absolute;
     top: 0;
-    right: 55px; }
+    right: 55px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
   .card__ellipsis {
     width: 4px;
     height: 15px;

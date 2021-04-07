@@ -182,6 +182,9 @@ a {
     &:after {
       box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
     }
+    &:hover {
+      color: $mainColor;
+    }
   }
   &__favorites {
     svg {
@@ -192,6 +195,11 @@ a {
       svg {
         stroke: $mainColor;
         fill: $mainColor;
+      }
+    }
+    &:hover {
+      svg {
+        stroke: $mainColor;
       }
     }
   }

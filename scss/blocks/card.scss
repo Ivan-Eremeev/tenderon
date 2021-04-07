@@ -105,6 +105,7 @@
     margin-right: 15px;
     cursor: pointer;
     user-select: none;
+    transition: 0.2s;
     &:after {
       content: '';
       display: block;
@@ -127,6 +128,7 @@
     position: absolute;
     top: 0;
     right: 55px;
+    transition: 0.2s;
   }
   &__ellipsis {
     width: 4px;

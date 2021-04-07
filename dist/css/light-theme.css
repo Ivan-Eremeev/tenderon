@@ -132,6 +132,9 @@ a {
   -webkit-box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
   box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35); }
 
+.card__journal:hover {
+  color: #46D0DB; }
+
 .card__favorites svg {
   stroke: #D3E3F8;
   fill: #fff; }
@@ -139,6 +142,9 @@ a {
 .card__favorites.active svg {
   stroke: #46D0DB;
   fill: #46D0DB; }
+
+.card__favorites:hover svg {
+  stroke: #46D0DB; }
 
 .card__drop {
   background: #F5F5FA;
