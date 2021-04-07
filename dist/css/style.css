@@ -829,10 +829,27 @@ body {
         left: 0;
         top: -5px;
         bottom: -5px; }
+    .card__col svg {
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      margin-right: 10px; }
   .card__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 12px; }
+  .card__desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .card__text {
     line-height: 16px;
     margin-bottom: 15px; }

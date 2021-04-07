@@ -41,14 +41,21 @@
         bottom: -5px;
       }
     }
+    svg {
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
   }
   &__title {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 12px;
   }
   &__desc {
-
+    display: flex;
+    align-items: center;
   }
   &__text {
     line-height: 16px;
