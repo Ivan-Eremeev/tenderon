@@ -221,9 +221,24 @@ a {
 }
 
 .pagination {
+  &__arrows {
+    a {
+      svg {
+        stroke: $mainColor;
+      }
+      &:hover {
+        svg {
+          stroke: $black;
+        }
+      }
+    }
+  }
   &__numbers {
     a {
       color: $mainColor;
+      &:hover {
+        color: $black;
+      }
     }
   }
 }

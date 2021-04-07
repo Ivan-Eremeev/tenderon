@@ -160,8 +160,16 @@ a {
   box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
   color: #fff; }
 
+.pagination__arrows a svg {
+  stroke: #46D0DB; }
+
+.pagination__arrows a:hover svg {
+  stroke: #31456a; }
+
 .pagination__numbers a {
   color: #46D0DB; }
+  .pagination__numbers a:hover {
+    color: #31456a; }
 
 .footer__container {
   border-top: 1px solid #D3E0ED; }
