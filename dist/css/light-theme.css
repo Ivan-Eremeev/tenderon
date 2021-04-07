@@ -6,23 +6,23 @@ a {
   color: #31456a; }
 
 *::-webkit-input-placeholder {
-  color: #a9a9a9;
+  color: #31456a;
   opacity: 1; }
 
 *::-moz-placeholder {
-  color: #a9a9a9;
+  color: #31456a;
   opacity: 1; }
 
 *:-ms-input-placeholder {
-  color: #a9a9a9;
+  color: #31456a;
   opacity: 1; }
 
 *::-ms-input-placeholder {
-  color: #a9a9a9;
+  color: #31456a;
   opacity: 1; }
 
 *::placeholder {
-  color: #a9a9a9;
+  color: #31456a;
   opacity: 1; }
 
 .header__top {
