@@ -156,3 +156,13 @@ a {
 
 .pagination__numbers a {
   color: #46D0DB; }
+
+.footer__container {
+  border-top: 1px solid #D3E0ED; }
+
+.footer__list a {
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s; }
+  .footer__list a:hover {
+    color: #46D0DB; }

@@ -1,0 +1,31 @@
+.footer {
+  margin-top: 80px;
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  &__col {
+    @include col(3);
+  }
+  &__logo {
+    display: block;
+    max-width: 115px;
+    max-height: 30px;
+    margin-bottom: 25px;
+  }
+  &__title {
+    margin-bottom: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    &--nomar {
+      margin-bottom: 0;
+    }
+  }
+  &__stores {
+    display: flex;
+    margin-left: -10px;
+    a {
+      margin-left: 10px;
+    }
+  }
+}

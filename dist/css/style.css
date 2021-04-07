@@ -1035,3 +1035,29 @@ body {
     text-align: center; }
     .pagination__numbers a {
       padding: 10px; }
+
+.footer {
+  margin-top: 80px; }
+  .footer__container {
+    padding-top: 20px;
+    padding-bottom: 50px; }
+  .footer__col {
+    width: 25%; }
+  .footer__logo {
+    display: block;
+    max-width: 115px;
+    max-height: 30px;
+    margin-bottom: 25px; }
+  .footer__title {
+    margin-bottom: 28px;
+    font-size: 14px;
+    font-weight: 700; }
+    .footer__title--nomar {
+      margin-bottom: 0; }
+  .footer__stores {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -10px; }
+    .footer__stores a {
+      margin-left: 10px; }

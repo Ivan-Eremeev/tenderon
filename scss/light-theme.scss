@@ -219,3 +219,17 @@ a {
     }
   }
 }
+
+.footer {
+  &__container {
+    border-top: 1px solid $border;
+  }
+  &__list {
+    a {
+      transition: 0.1s;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
