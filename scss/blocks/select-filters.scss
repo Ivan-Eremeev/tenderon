@@ -16,6 +16,7 @@
     margin-bottom: 10px;
     border-radius: 10px; 
     cursor: pointer;
+    user-select: none;
     position: relative;
   }
   &__cross {

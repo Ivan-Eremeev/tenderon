@@ -1,0 +1,61 @@
+mixin card(favorites,auction)
+  // card
+  .card
+
+    .card__body
+
+      .card__head
+        .card__col.card__col--1
+          .card__title Организация
+          .card__desc Санкт-Петербург 
+        .card__col.card__col--2
+          .card__title
+            100 200 300 ₽
+          .card__desc
+            span 12345678910111213
+        .card__col.card__col--3
+          .card__title
+            span 9 дней
+          .card__desc
+            span 07.03.2021
+
+      .card__text 
+        p Закупка картриджей для принтеров HP M200. Структура организации влечет за собой процесс внедрения и модернизации систем массового участия. Повседневная практика показывает,  что дальнейшее развитие различных форм.
+
+      .card__footer
+        .card__group
+          if auction
+            .card__category.card__category--green Аукцион
+          else
+            .card__category.card__category--violet Конкурс
+          .card__name ФЗ-44
+          .card__sticks 
+            .card__stick.card__stick--blue ЕЭТП Россельторг
+            .card__stick.card__stick--green Аванс
+        .card__journal Журнал
+
+        if favorites
+          a(href="#").card__favorites.active
+            img(src="img/flag_2.svg", alt="")
+        else
+          a(href="#").card__favorites
+            img(src="img/flag_2.svg", alt="")
+        
+        .card__ellipsis
+
+    .card__drop 
+
+      .card__drop-row 
+        .card__drop-col.card__drop-col--1
+          span 19.01.2021
+          span 15:00
+        .card__drop-col.card__drop-col--2 Контракт 1234567890
+        .card__drop-col.card__drop-col--3 Особенности протокола, дополнительные детали
+      .card__drop-row 
+        .card__drop-col.card__drop-col--1
+          span 19.01.2021
+          span 15:00
+        .card__drop-col.card__drop-col--2 Контракт 1234567890
+        .card__drop-col.card__drop-col--3 Особенности протокола, дополнительные детали и прочие дополнительные сведения 
+
+  //	/card

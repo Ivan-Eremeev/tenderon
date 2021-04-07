@@ -69,7 +69,7 @@ $(document).ready(function () {
 	};
 	myMenu($('.js-menu'));
 
-	// Выпадайка при клике
+	// Выпадайка при клике со сменой класса
 	function dropClick(btn) {
 		if (btn.length) {
 			btn.each(function () {
@@ -90,6 +90,22 @@ $(document).ready(function () {
 		}
 	}
 	dropClick($('.js-drop-click'));
+
+	// Выпадайка при клике в карточке
+	function dropDown() {
+		if ($('.card').length) {
+			$('.card').each(function () {
+				var $this = $(this),
+						btn = $this.find('.card__journal'),
+						drop = $this.find('.card__drop');
+				btn.on('click', function () {
+					drop.stop().slideToggle();
+					btn.toggleClass('active');
+				})
+			})
+		}
+	}
+	dropDown();
 
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {

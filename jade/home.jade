@@ -14,6 +14,8 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
+include blocks/card.jade
+
 block content
 
 	.page
@@ -87,7 +89,12 @@ block content
 									img(src="img/file.svg", alt="")
 						//	/sort
 
-						
+						.cards
+
+							+card(false,true)
+							+card(true)
+							+card(true)
+							+card
 
 					aside.sidebar
 			

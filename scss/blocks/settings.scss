@@ -87,5 +87,9 @@ body {
 }
 .sidebar {
   width: 244px;
+  flex-shrink: 0;
+}
+.cards {
+  padding-top: 20px;
 }
 /* /settings */

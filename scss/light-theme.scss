@@ -132,3 +132,76 @@ a {
     }
   }
 }
+
+.card {
+  &__body {
+    background-color: $white;
+    box-shadow: $shadow;
+  }
+  &__col {
+    &--2 {
+      &:after {
+        background-color: $mainColor;
+      }
+    }
+    &--3 {
+       &:after {
+        background-color: $mainColor;
+      }
+    }
+  }
+  &__text {
+    color: #000;
+  }
+  &__category {
+    &--green {
+      color: #83CCD6;
+      &:after {
+        background-color: #83CCD6;
+      }
+    }
+    &--violet {
+      color: #4C51CD;
+      &:after {
+        background-color: #4C51CD;
+      }
+    }
+  }
+  &__name {
+    border-bottom: 2px solid #5e63d2;
+  }
+  &__stick {
+    &--blue {
+      background-color: #EBF5FF;
+    }
+    &--green {
+      background-color: #EBFFF0;
+    }
+  }
+  &__journal {
+    &:after {
+      box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
+    }
+  }
+  &__favorites {
+    svg {
+      stroke: #D3E3F8;
+      fill: $white;
+    }
+    &.active {
+      svg {
+        stroke: $mainColor;
+        fill: $mainColor;
+      }
+    }
+  }
+  &__drop {
+    background: #F5F5FA;
+    box-shadow: inset 4px 2px 6px rgba(72, 100, 125, 0.3);
+  }
+  &__drop-row {
+    &:not(:last-child) {
+      border-bottom: 1px solid $border;
+    }
+  }
+}
