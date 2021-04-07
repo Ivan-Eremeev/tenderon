@@ -282,6 +282,39 @@ a {
   &__date {
     border-bottom: 1px solid $border;
   }
+  &__amount {
+    border-bottom: 1px solid $border;
+    input {
+      background: transparent;
+    }
+  }
+  &__radio2 {
+    input {
+      &:checked {
+        + .filters__radio2-circle {
+          &:after {
+            background-color: $mainColor;
+            box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 0.55), inset 3px 3px 5px rgba(136, 160, 183, 0.35);
+          }
+        }
+      }
+    }
+  }
+  &__radio2-circle {
+    background-color: $white;
+    box-shadow: $shadow;
+    &:after {
+      background: #31456A;
+      box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(170, 170, 204, 0.25), inset 5px 5px 10px rgba(170, 170, 204, 0.5), inset -5px -5px 10px #FFFFFF;
+    }
+  }
+  &__plus {
+    box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='7' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.38889 3.88889V6.61111C4.38889 6.71425 4.34792 6.81317 4.27499 6.8861C4.20206 6.95903 4.10314 7 4 7C3.89686 7 3.79795 6.95903 3.72501 6.8861C3.65208 6.81317 3.61111 6.71425 3.61111 6.61111V3.88889H0.888889C0.785749 3.88889 0.686834 3.84792 0.613903 3.77499C0.540972 3.70206 0.5 3.60314 0.5 3.5C0.5 3.39686 0.540972 3.29795 0.613903 3.22501C0.686834 3.15208 0.785749 3.11111 0.888889 3.11111H3.61111V0.388889C3.61111 0.285749 3.65208 0.186834 3.72501 0.113903C3.79795 0.0409721 3.89686 0 4 0C4.10314 0 4.20206 0.0409721 4.27499 0.113903C4.34792 0.186834 4.38889 0.285749 4.38889 0.388889V3.11111H7.11111C7.21425 3.11111 7.31317 3.15208 7.3861 3.22501C7.45903 3.29795 7.5 3.39686 7.5 3.5C7.5 3.60314 7.45903 3.70206 7.3861 3.77499C7.31317 3.84792 7.21425 3.88889 7.11111 3.88889H4.38889Z' fill='%23686868'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
 }
 
 .ui-datepicker {
@@ -308,14 +341,6 @@ a {
   border-radius: 10px;
 }
 
-.filters {
-  &__amount {
-    border-bottom: 1px solid $border;
-    input {
-      background: transparent;
-    }
-  }
-}
 .ui-slider.ui-corner-all.ui-slider-horizontal.ui-widget.ui-widget-content {
   background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
   border: 0.5px solid #F5F5FA;

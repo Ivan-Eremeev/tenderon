@@ -160,12 +160,26 @@ block content
 							.filters__row 
 								.subtitle Начальная цена
 								#slider.filters__slider
-								.filters__flex 
+								.filters__flex
 									.filters__amount
 										input(type="text" readonly)#amount1
 									span.filters__dash &mdash;
 									.filters__amount
-										input(type="text" readonly)#amount2
+										input(type="text" readonly)#amount2 
+								.filters__radio2
+									input#price_1(type="radio" name="price")
+									label.filters__radio2-circle(for="price_1") 
+									label.filters__radio2-text(for="price_1") С авансом
+								.filters__radio2
+									input#price_2(type="radio" name="price")
+									label.filters__radio2-circle(for="price_2") 
+									label.filters__radio2-text(for="price_2") Бесплатное участие
+
+							.filters__row
+								.filters__dropbtn
+									.subtitle Заказчики
+									.filters__plus
+								.filters__drop
 						//	/filters
 
 
