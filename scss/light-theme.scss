@@ -449,3 +449,6 @@ a {
 .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
   background: $mainColor;
 }
+.scroll-wrapper {
+  overflow: visible !important;
+}

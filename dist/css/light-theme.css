@@ -363,3 +363,6 @@ a {
 
 .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
   background: #46D0DB; }
+
+.scroll-wrapper {
+  overflow: visible !important; }
