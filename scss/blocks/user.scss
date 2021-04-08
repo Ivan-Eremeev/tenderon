@@ -11,6 +11,11 @@
     padding: 8px;
     box-shadow: $shadow;
     border-radius: 10px;
+    &.active {
+      svg {
+        fill: $mainColor;
+      }
+    }
   }
   &__login {
     display: flex;

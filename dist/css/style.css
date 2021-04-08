@@ -484,6 +484,8 @@ body {
     -webkit-box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
     box-shadow: 5px 8px 10px rgba(170, 170, 204, 0.25), 5px 2px 8px rgba(170, 170, 204, 0.5);
     border-radius: 10px; }
+    .user__notify.active svg {
+      fill: #46D0DB; }
   .user__login {
     display: -webkit-box;
     display: -ms-flexbox;
