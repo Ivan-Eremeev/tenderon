@@ -41,10 +41,6 @@
         bottom: -5px;
       }
     }
-    svg {
-      flex-shrink: 0;
-      margin-right: 10px;
-    }
   }
   &__title {
     display: flex;
@@ -52,10 +48,27 @@
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 12px;
+    position: relative;
+    &--pl {
+      padding-left: 30px;
+    }
   }
   &__desc {
     display: flex;
     align-items: center;
+    padding-left: 30px;
+    position: relative;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
   }
   &__text {
     line-height: 16px;

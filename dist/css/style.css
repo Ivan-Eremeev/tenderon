@@ -558,13 +558,9 @@ body {
       .user__drop ul li {
         margin: 15px 0;
         position: relative; }
-        .user__drop ul li svg {
-          position: absolute;
-          top: 0px;
-          left: 0; }
         .user__drop ul li a {
           display: inline-block;
-          padding-left: 25px;
+          padding-left: 30px;
           white-space: nowrap;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
@@ -573,6 +569,24 @@ body {
             -webkit-transform: translate(2px, 0);
             -ms-transform: translate(2px, 0);
             transform: translate(2px, 0); }
+  .user__drop-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .user__arrow {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -726,10 +740,10 @@ body {
       content: '';
       display: block;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
+      top: -5px;
       left: 8px;
+      bottom: -5px;
+      right: -5px;
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
@@ -878,10 +892,6 @@ body {
         left: 0;
         top: -5px;
         bottom: -5px; }
-    .card__col svg {
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-      margin-right: 10px; }
   .card__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -891,14 +901,37 @@ body {
     align-items: center;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    position: relative; }
+    .card__title--pl {
+      padding-left: 30px; }
   .card__desc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    padding-left: 30px;
+    position: relative; }
+  .card__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%); }
   .card__text {
     line-height: 16px;
     margin-bottom: 10px; }

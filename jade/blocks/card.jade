@@ -1,4 +1,4 @@
-mixin card(favorites,auction)
+mixin card(favorites,auction,stick)
   // card
   .card
 
@@ -9,18 +9,22 @@ mixin card(favorites,auction)
           .card__title Организация
           .card__desc Санкт-Петербург 
         .card__col.card__col--2
-          .card__title
-            img(src="img/money.svg", alt="")
+          .card__title.card__title--pl
+            .card__icon
+              img(src="img/money.svg", alt="")
             span 100 200 300 ₽
           .card__desc
-            img(src="img/number.svg", alt="")
+            .card__icon
+              img(src="img/number.svg", alt="")
             span 12345678910111213
         .card__col.card__col--3
-          .card__title
-            img(src="img/clock.svg", alt="")
+          .card__title.card__title--pl
+            .card__icon
+              img(src="img/clock.svg", alt="")
             span 9 дней
           .card__desc
-            img(src="img/calendar.svg", alt="")
+            .card__icon
+              img(src="img/calendar.svg", alt="")
             span 07.03.2021
 
       .card__text 
@@ -35,7 +39,8 @@ mixin card(favorites,auction)
           .card__name ФЗ-44
           .card__sticks 
             .card__stick.card__stick--blue ЕЭТП Россельторг
-            .card__stick.card__stick--green Аванс
+            if stick
+              .card__stick.card__stick--green Аванс
         .card__journal Журнал
           .card__journal-arrow
 
