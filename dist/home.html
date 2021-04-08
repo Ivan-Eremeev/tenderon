@@ -16,7 +16,7 @@
 			<!-- header-->
 			<header class="header" id="header">
 				<div class="header__top">
-					<div class="wrapper"><a class="header__logo" href="home.html"><img src="img/logo.png" alt=""></a>
+					<div class="wrapper"><a class="header__logo" href="home.html"><img src="img/logo.svg" alt=""></a>
 						<!-- menu-->
 						<div class="js-menu menu menu--right">
 							<div class="menu__btn hamburger hamburger--squeeze" id="menu-btn">
@@ -169,7 +169,9 @@
 														<div class="card__stick card__stick--green">Аванс</div>
 													</div>
 												</div>
-												<div class="card__journal">Журнал</div><a class="card__favorites" href="#"><img src="img/flag_2.svg" alt=""/></a>
+												<div class="card__journal">Журнал
+													<div class="card__journal-arrow"></div>
+												</div><a class="card__favorites" href="#"><img src="img/flag_2.svg" alt=""/></a>
 												<div class="card__ellipsis"></div>
 											</div>
 										</div>
@@ -216,7 +218,9 @@
 														<div class="card__stick card__stick--green">Аванс</div>
 													</div>
 												</div>
-												<div class="card__journal">Журнал</div><a class="card__favorites active" href="#"><img src="img/flag_2.svg" alt=""/></a>
+												<div class="card__journal">Журнал
+													<div class="card__journal-arrow"></div>
+												</div><a class="card__favorites active" href="#"><img src="img/flag_2.svg" alt=""/></a>
 												<div class="card__ellipsis"></div>
 											</div>
 										</div>
@@ -263,7 +267,9 @@
 														<div class="card__stick card__stick--green">Аванс</div>
 													</div>
 												</div>
-												<div class="card__journal">Журнал</div><a class="card__favorites active" href="#"><img src="img/flag_2.svg" alt=""/></a>
+												<div class="card__journal">Журнал
+													<div class="card__journal-arrow"></div>
+												</div><a class="card__favorites active" href="#"><img src="img/flag_2.svg" alt=""/></a>
 												<div class="card__ellipsis"></div>
 											</div>
 										</div>
@@ -310,7 +316,9 @@
 														<div class="card__stick card__stick--green">Аванс</div>
 													</div>
 												</div>
-												<div class="card__journal">Журнал</div><a class="card__favorites" href="#"><img src="img/flag_2.svg" alt=""/></a>
+												<div class="card__journal">Журнал
+													<div class="card__journal-arrow"></div>
+												</div><a class="card__favorites" href="#"><img src="img/flag_2.svg" alt=""/></a>
 												<div class="card__ellipsis"></div>
 											</div>
 										</div>
@@ -529,27 +537,46 @@
 									</div>
 									<div class="filters__row">
 										<div class="subtitle">Способы размещения</div>
-										<div class="filters__location">
-											<div class="filters__radio2">
-												<input id="location_1" type="checkbox">
-												<label class="filters__radio2-circle" for="location_1"> </label>
-												<label class="filters__radio2-text" for="location_1">Аукцион</label>
+										<div class="filters__switcblock">
+											<div class="filters__switch"> 
+												<input id="filtersSwitch" type="checkbox" name="">
+												<label class="filters__switch-back" for="filtersSwitch"> </label>
+												<label class="filters__switch-circle" for="filtersSwitch"></label>
+												<label class="filters__switch-text" for="filtersSwitch"> Выбрать все</label>
 											</div>
-											<div class="filters__radio2">
-												<input id="location_2" type="checkbox">
-												<label class="filters__radio2-circle" for="location_2"> </label>
-												<label class="filters__radio2-text" for="location_2">Конкурс</label>
+											<div class="filters__location" id="filtersLocation">
+												<div class="filters__radio2">
+													<input id="location_1" type="checkbox">
+													<label class="filters__radio2-circle" for="location_1"> </label>
+													<label class="filters__radio2-text" for="location_1">Аукцион</label>
+												</div>
+												<div class="filters__radio2">
+													<input id="location_2" type="checkbox">
+													<label class="filters__radio2-circle" for="location_2"> </label>
+													<label class="filters__radio2-text" for="location_2">Конкурс</label>
+												</div>
+												<div class="filters__radio2">
+													<input id="location_3" type="checkbox">
+													<label class="filters__radio2-circle" for="location_3"> </label>
+													<label class="filters__radio2-text" for="location_3">Запрос котировок</label>
+												</div>
+												<div class="filters__radio2">
+													<input id="location_4" type="checkbox">
+													<label class="filters__radio2-circle" for="location_4"> </label>
+													<label class="filters__radio2-text" for="location_4">Запрос предложений</label>
+												</div>
+												<div class="filters__radio2">
+													<input id="location_5" type="checkbox">
+													<label class="filters__radio2-circle" for="location_5"> </label>
+													<label class="filters__radio2-text" for="location_5">Запрос предложений</label>
+												</div>
+												<div class="filters__radio2">
+													<input id="location_6" type="checkbox">
+													<label class="filters__radio2-circle" for="location_6"> </label>
+													<label class="filters__radio2-text" for="location_6">Запрос предложений</label>
+												</div>
 											</div>
-											<div class="filters__radio2">
-												<input id="location_3" type="checkbox">
-												<label class="filters__radio2-circle" for="location_3"> </label>
-												<label class="filters__radio2-text" for="location_3">Запрос котировок</label>
-											</div>
-											<div class="filters__radio2">
-												<input id="location_4" type="checkbox">
-												<label class="filters__radio2-circle" for="location_4"> </label>
-												<label class="filters__radio2-text" for="location_4">Запрос предложений</label>
-											</div>
+											<div class="filters__showall js-drop-click" data-id="#filtersLocation" data-hide="no">Показать все</div>
 										</div>
 									</div>
 								</div>
@@ -566,7 +593,7 @@
 				<div class="wrapper"> 
 					<div class="footer__container">
 						<div class="row"> 
-							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo.png" alt=""></a>
+							<div class="footer__col"><a class="footer__logo" href="#"> <img src="img/logo.svg" alt=""></a>
 								<ul class="footer__list"> 
 									<li> <a href="#">О сервисе</a></li>
 									<li> <a href="#">Поиск</a></li>

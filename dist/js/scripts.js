@@ -75,17 +75,22 @@ $(document).ready(function () {
 			btn.each(function () {
 				var $this = $(this),
 					id = $this.data('id'),
+					hide = $this.data('hide'),
 					dropBlock = $(id);
 				$this.on('click', function () {
 					$this.toggleClass('active');
 					dropBlock.toggleClass('open');
 				});
-				$(document).mouseup(function (e) {
-					if (!dropBlock.is(e.target) && dropBlock.has(e.target).length === 0 && !$this.is(e.target) && $this.has(e.target).length === 0) {
-						$this.removeClass('active');
-						dropBlock.removeClass('open');
-					}
-				});
+				if (hide == 'no') {
+					return false;
+				}else {
+					$(document).mouseup(function (e) {
+						if (!dropBlock.is(e.target) && dropBlock.has(e.target).length === 0 && !$this.is(e.target) && $this.has(e.target).length === 0) {
+							$this.removeClass('active');
+							dropBlock.removeClass('open');
+						}
+					});
+				}
 			});
 		}
 	}
@@ -109,6 +114,24 @@ $(document).ready(function () {
 
 	// JQueryScrollbar
 	$('.scrollbar-inner').scrollbar();
+
+	// Ползунок выбора фильтров
+	function switchFilters() {
+		var block = $('.filters__switcblock'),
+				inputMain = block.find('#filtersSwitch'),
+				circle = block.find('.filters__switch-circle'),
+				inputsGroup = block.find('.filters__location input');
+		inputMain.on('change', function () {
+			if (inputMain.prop('checked')) {
+				circle.addClass('checked');
+				inputsGroup.prop('checked', true);
+			}else {
+				circle.removeClass('checked');
+				inputsGroup.prop('checked', false);
+			}
+		})
+	}
+	switchFilters();
 
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {

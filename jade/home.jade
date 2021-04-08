@@ -277,23 +277,38 @@ block content
 
 								.filters__row
 									.subtitle Способы размещения
-									.filters__location
-										.filters__radio2
-											input#location_1(type="checkbox")
-											label.filters__radio2-circle(for="location_1") 
-											label.filters__radio2-text(for="location_1") Аукцион
-										.filters__radio2
-											input#location_2(type="checkbox")
-											label.filters__radio2-circle(for="location_2") 
-											label.filters__radio2-text(for="location_2") Конкурс
-										.filters__radio2
-											input#location_3(type="checkbox")
-											label.filters__radio2-circle(for="location_3") 
-											label.filters__radio2-text(for="location_3") Запрос котировок
-										.filters__radio2
-											input#location_4(type="checkbox")
-											label.filters__radio2-circle(for="location_4") 
-											label.filters__radio2-text(for="location_4") Запрос предложений
+									.filters__switcblock
+										.filters__switch 
+											input#filtersSwitch(type="checkbox", name="")
+											label.filters__switch-back(for="filtersSwitch") 
+											label.filters__switch-circle(for="filtersSwitch")
+											label.filters__switch-text(for="filtersSwitch")  Выбрать все
+										.filters__location#filtersLocation
+											.filters__radio2
+												input#location_1(type="checkbox")
+												label.filters__radio2-circle(for="location_1") 
+												label.filters__radio2-text(for="location_1") Аукцион
+											.filters__radio2
+												input#location_2(type="checkbox")
+												label.filters__radio2-circle(for="location_2") 
+												label.filters__radio2-text(for="location_2") Конкурс
+											.filters__radio2
+												input#location_3(type="checkbox")
+												label.filters__radio2-circle(for="location_3") 
+												label.filters__radio2-text(for="location_3") Запрос котировок
+											.filters__radio2
+												input#location_4(type="checkbox")
+												label.filters__radio2-circle(for="location_4") 
+												label.filters__radio2-text(for="location_4") Запрос предложений
+											.filters__radio2
+												input#location_5(type="checkbox")
+												label.filters__radio2-circle(for="location_5") 
+												label.filters__radio2-text(for="location_5") Запрос предложений
+											.filters__radio2
+												input#location_6(type="checkbox")
+												label.filters__radio2-circle(for="location_6") 
+												label.filters__radio2-text(for="location_6") Запрос предложений
+										.filters__showall.js-drop-click(data-id="#filtersLocation" data-hide="no") Показать все
 							button(type="submit").btn Применить фильтры
 							.btn.btn--2 Сбросить фильтры
 						//	/filters

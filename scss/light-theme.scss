@@ -89,6 +89,7 @@ a {
   &__button {
     background-color: $mainColor;
     box-shadow: inset 2px 2px 5px rgba(105, 141, 173, 0.4);
+    border: 1px solid #DEE8F3;
     span {
       background: linear-gradient(129.58deg, #E6EEF8 39.73%, #FFFFFF 151.21%);
       box-shadow: inset 0px -1px 1px rgba(85, 102, 123, 0.4);
@@ -180,12 +181,12 @@ a {
     }
   }
   &__journal {
-    &:after {
-      box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
-    }
     &:hover {
       color: $mainColor;
     }
+  }
+  &__journal-arrow {
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55), 3px 3px 5px rgba(136, 160, 183, 0.35);
   }
   &__favorites {
     svg {
@@ -327,6 +328,23 @@ a {
     background-color: $white;
     box-shadow: $shadow;
   }
+  &__switch {
+
+  }
+  &__switch-back {
+    background-color: $mainColor;
+    &:after {
+      background: #DEE8F2;
+      box-shadow: inset 2px 2px 5px rgb(105,141,173);
+    }
+  }
+  &__switch-circle {
+    background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+    box-shadow: -10px -10px 18px rgba(255, 255, 255, 0.8), 3px 1px 4px rgba(114, 137, 171, 0.9);
+  }
+  &__showall {
+    color: $mainColor;
+  }
 }
 
 .ui-datepicker {
@@ -351,6 +369,37 @@ a {
   background: $white;
   border-color: $border;
   border-radius: 10px;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  &:after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.71739 0.999999L1.24609 5L5.71739 9' stroke-linecap='round' stroke='%2346D0DB' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  }
+}
+.ui-datepicker-next {
+  &:after {
+    transform: rotate(180deg);
+  }
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+  top: 2px;
+  left: 2px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 2px;
+  right: 2px;
+}
+.ui-state-hover, .ui-widget-content .ui-stte-hover, .ui-widget-header .ui-state-hover {
+  border: none;
+  background: transparent;
 }
 
 .ui-slider.ui-corner-all.ui-slider-horizontal.ui-widget.ui-widget-content {
