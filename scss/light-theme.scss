@@ -81,13 +81,12 @@ a {
     input {
       &:checked {
         + .sort__button {
-
+          background-color: $mainColor;
         }
       }
     }
   }
   &__button {
-    background-color: $mainColor;
     box-shadow: inset 2px 2px 5px rgba(105, 141, 173, 0.4);
     border: 1px solid #DEE8F3;
     span {
@@ -344,6 +343,9 @@ a {
   }
   &__showall {
     color: $mainColor;
+  }
+  &__dash {
+    background-color: $black;
   }
 }
 

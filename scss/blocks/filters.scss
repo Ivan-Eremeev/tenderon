@@ -60,7 +60,7 @@
     align-items: center;
     padding-bottom: 5px;
     input {
-      width: 70px;
+      width: 60px;
       font-size: 13px;
       border: none;
       background: transparent;
@@ -88,6 +88,9 @@
   }
   &__dash {
     margin: 0 10px;
+    width: 10px;
+    height: 1px;
+    flex-shrink: 0;
   }
   &__radio2 {
     display: flex;
