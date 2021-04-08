@@ -56,8 +56,10 @@
   &__desc {
     display: flex;
     align-items: center;
-    padding-left: 30px;
     position: relative;
+    &--pl {
+      padding-left: 30px;
+    }
   }
   &__icon {
     display: flex;
