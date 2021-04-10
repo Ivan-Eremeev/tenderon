@@ -1200,7 +1200,8 @@ body {
     font-size: 13px;
     border: none;
     background: transparent;
-    z-index: 2; }
+    z-index: 2;
+    color: #31456a; }
   .filters__date label {
     display: block;
     width: 17px;
